@@ -10,5 +10,22 @@
    
    <bean id="metier"  class="com.test.IMetierImpl"  />
    
+   <bean id="OutputHelper" class="com.test.OutputHelper">
+		<constructor-arg>
+			<ref bean="JsonOutputGenerator" />
+		</constructor-arg>
+	</bean>
+ 
+	<bean id="JsonOutputGenerator" class="com.test.JsonOutputGenerator" />
+	
+	
+	<bean id="OutputHelperSetter" class="com.test.OutputHelperSetter">
+		<property name="outputGenerator" ref="CsvOutputGenerator" />
+	</bean>
+ 
+	<bean id="CsvOutputGenerator" class="com.test.CsvOutputGenerator" />
+	
+	
+   
    
    </beans>
