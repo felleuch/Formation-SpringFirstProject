@@ -15,8 +15,17 @@
 			<ref bean="JsonOutputGenerator" />
 		</constructor-arg>
 	</bean>
+	
+	
+	<bean id="InputHelper" class="com.test.InputHelper">
+		<constructor-arg>
+			<ref bean="JsonInputGenerator" />
+		</constructor-arg>
+	</bean>
  
 	<bean id="JsonOutputGenerator" class="com.test.JsonOutputGenerator" />
+	
+	<bean id="JsonInputGenerator" class="com.test.JsonInputGenerator" />
 	
 	
 	<bean id="OutputHelperSetter" class="com.test.OutputHelperSetter">

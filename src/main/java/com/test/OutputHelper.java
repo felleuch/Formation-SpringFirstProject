@@ -7,7 +7,7 @@ public class OutputHelper {
 	
 	IOutputGenerator outputGenerator;
 	
-	//IInputGenerator inputGenerator;
+	IInputGenerator inputGenerator;
 
 	public void generateOutput() {
 		outputGenerator.generateOutput();

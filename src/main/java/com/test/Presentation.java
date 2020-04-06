@@ -18,6 +18,9 @@ public class Presentation {
 		
 		OutputHelper output = (OutputHelper)context.getBean("OutputHelper");
         output.generateOutput();
+        
+        InputHelper input = (InputHelper)context.getBean("InputHelper");
+        input.generateInput();
 		
         /*  injection par setter  */
         
