@@ -27,6 +27,8 @@ public class Presentation {
         OutputHelperSetter outputSetter = (OutputHelperSetter)context.getBean("OutputHelperSetter");
         outputSetter.generateOutput();
         
+        context.close();
+        
 
 	}
 

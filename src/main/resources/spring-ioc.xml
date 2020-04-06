@@ -10,7 +10,7 @@
    
    <bean id="metier"  class="com.test.IMetierImpl"  />
    
-   <bean id="OutputHelper" class="com.test.OutputHelper">
+   <bean id="OutputHelper" class="com.test.OutputHelper"   init-method="initIt"  destroy-method="cleanUp" >
 		<constructor-arg>
 			<ref bean="JsonOutputGenerator" />
 		</constructor-arg>
@@ -25,7 +25,7 @@
  
 	<bean id="JsonOutputGenerator" class="com.test.JsonOutputGenerator" />
 	
-	<bean id="JsonInputGenerator" class="com.test.JsonInputGenerator" />
+ 	<bean id="JsonInputGenerator" class="com.test.JsonInputGenerator" /> 
 	
 	
 	<bean id="OutputHelperSetter" class="com.test.OutputHelperSetter">
