@@ -16,7 +16,7 @@ public class Presentation {
 		
 		/*  injection par constructeur  */
 		
-		OutputHelper output = (OutputHelper)context.getBean("OutputHelper");
+		OutputHelper output = (OutputHelper)context.getBean("simpleServiceProxy");
         output.generateOutput();
         
         InputHelper input = (InputHelper)context.getBean("InputHelper");
